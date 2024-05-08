@@ -48,7 +48,6 @@ public class ProductService {
     public List<ProductResponseDto> getProducts() {
         List<ProductEntity> products = productRepository.findAll();
         System.out.println(products);
-        System.out.println("pull");
         System.out.println("Prueba Develop");
         List<ProductResponseDto> productResult = new ArrayList<>();
         for(ProductEntity product: products) {
