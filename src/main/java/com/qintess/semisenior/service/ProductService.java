@@ -49,6 +49,7 @@ public class ProductService {
         List<ProductEntity> products = productRepository.findAll();
         System.out.println(products);
         System.out.println("pull");
+        System.out.println("Prueba Develop");
         List<ProductResponseDto> productResult = new ArrayList<>();
         for(ProductEntity product: products) {
             productResult.add(mapper.map(product, ProductResponseDto.class));
