@@ -16,6 +16,7 @@ import com.qintess.semisenior.dto.request.ProductRequestDto;
 import com.qintess.semisenior.dto.response.ProductResponseDto;
 import com.qintess.semisenior.entity.ProductEntity;
 import com.qintess.semisenior.repository.IProductRepository;
+import jakarta.servlet.ServletOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -48,6 +49,8 @@ public class ProductService {
     public List<ProductResponseDto> getProducts() {
         List<ProductEntity> products = productRepository.findAll();
         System.out.println(products);
+        System.out.println("pull");
+        System.out.println("Hola Mundo!");
         List<ProductResponseDto> productResult = new ArrayList<>();
         for(ProductEntity product: products) {
             productResult.add(mapper.map(product, ProductResponseDto.class));
